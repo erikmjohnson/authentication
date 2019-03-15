@@ -2,13 +2,17 @@
 
 require('dotenv').config();
 
+
+const PORT=3000;
+const MONGODB_URI= 'mongodb://localhost/testdb';
+
 // Start up DB Server
 const mongoose = require('mongoose');
 const options = {
   useNewUrlParser:true,
   useCreateIndex: true,
 };
-mongoose.connect(process.env.MONGODB_URI, options);
+mongoose.connect(MONGODB_URI, options);
 
 // Start the web server
-require('./src/app.js').start(process.env.PORT);
+require('./src/app.js').start(PORT);
