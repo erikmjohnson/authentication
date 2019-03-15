@@ -31,7 +31,7 @@ describe('Auth Middleware', () => {
     
     let cachedToken;
 
-    it('fails a login for a user (admin) with the incorrect basic credentials', () => {
+    xit('fails a login for a user (admin) with the incorrect basic credentials', () => {
 
       let req = {
         headers: {
@@ -49,7 +49,7 @@ describe('Auth Middleware', () => {
 
     }); // it()
 
-    it('logs in an admin user with the right credentials', () => {
+    xit('logs in an admin user with the right credentials', () => {
 
       let req = {
         headers: {
