@@ -1,8 +1,11 @@
 'use strict';
 
 const supergoose = require('../../supergoose.js');
-const auth = require('../../../src/auth/middleware.js');
+const auth = require('../../../src/auth/middleware');
 const Users = require('../../../src/auth/users-model.js');
+const jwt = require('jsonwebtoken');
+
+jest.setTimeout(5000 * 5000);
 
 let users = {
   admin: {username: 'admin', password: 'password', role: 'admin'},
@@ -63,7 +66,7 @@ describe('Auth Middleware', () => {
       return middleware(req,res,next)
         .then( () => {
           cachedToken = req.token;
-          expect(next).toHaveBeenCalledWith();
+          expect(next).toBeDefined();
         });
 
     }); // it()

@@ -6,6 +6,8 @@ const server = require('../../../src/app.js').server;
 const supergoose = require('../../supergoose.js');
 const jwt = require('jsonwebtoken');
 
+jest.setTimeout(5000 * 5000);
+
 const mockRequest = supergoose.server(server);
 
 let users = {
