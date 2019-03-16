@@ -21,7 +21,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
-app.use(authRouter);  
+app.use(authRouter);
 
 // Add our Routes
 // Book!
