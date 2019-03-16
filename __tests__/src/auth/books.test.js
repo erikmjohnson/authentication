@@ -17,7 +17,6 @@ describe('Protected book routes', () => {
      .then(result => {
          expect(result.status).toBe(401);
      })
-     .catch(console.error);
  })
 
  it('responds with unauthorized requesting a specific book', () => {
@@ -25,7 +24,6 @@ describe('Protected book routes', () => {
     .then(result => {
         expect(result.status).toBe(401);
     })
-    .catch(console.error);
 })
   
 });

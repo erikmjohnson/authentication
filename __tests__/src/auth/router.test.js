@@ -45,7 +45,6 @@ describe('Auth Router', () => {
           .auth(users[userType].username, users[userType].password)
           .then(results => {
             var token = jwt.verify(encodedToken, process.env.SECRET || 'changeit');
-            console.log(results.text);
             expect(token.id).toEqual(id);
             expect(token.capabilities).toBeDefined();
           })
